@@ -17,10 +17,7 @@ btn.addEventListener('click', () => {
     const name = nameInput.value;
 
     // Validate inputs
-    if (isNaN(age) || age <= 0 || name.trim() === '') {
-        alert('Please enter valid age and name.');
-        return;
-    }
+   
 
     // Create and handle promise
     const agePromise = new Promise((resolve, reject) => {
@@ -39,7 +36,7 @@ btn.addEventListener('click', () => {
         .then(message => {
             alert(message);
         })
-        .catch(error => {
-            alert(error);
+        .catch(err => {
+            alert(err);
         });
 });
